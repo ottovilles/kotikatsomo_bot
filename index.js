@@ -19,7 +19,7 @@ bot.on('message', (msg) => {
       const obj = JSON.parse(json);
 
       if (obj) {
-        switch(obj.Playerdata.Clip[0].MediaType) {
+        switch(obj.Playerdata.Clip[0].MediaType[0]) {
           case VIDEO_MEDIATYPE:
             response = obj.Playerdata.Clip[0].AndroidMediaFiles[0].AndroidMediaFile[0];
             break;
